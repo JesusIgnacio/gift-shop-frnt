@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import Shop from './App';
+import 'bootstrap/dist/css/bootstrap.css';
+import './shop-homepage.css'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<Shop />, document.getElementById('root'));
