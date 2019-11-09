@@ -1,9 +1,8 @@
 import React from 'react';
 import {
-  Link,
-  Route
+  Link
 } from 'react-router-dom'
-import GiftDetail from './GiftDetail'
+
 class Catalog extends React.Component{
   render(){
     return (
@@ -21,7 +20,7 @@ class Catalog extends React.Component{
                         </h4>
                         <h5>${gift.prices.listPrice}</h5>
                       </div>
-                      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                      <p class="text">{gift.longDescription}</p>
                     </div>
                   </div>
                 ))}              
