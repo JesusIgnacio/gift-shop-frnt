@@ -8,7 +8,8 @@ import {
   Route,
   Link
 } from 'react-router-dom'
-import App from "./App"
+import App from "./App";
+import GiftDetail from "./GiftDetail"
 
 
 const routing = (
@@ -22,6 +23,7 @@ const routing = (
       </div>
     </nav>
     <Route exact path="/" component={App}></Route>
+    <Route path="/:id" component={GiftDetail}></Route>
   </Router>
 )
 ReactDOM.render(routing, document.getElementById('root'));
