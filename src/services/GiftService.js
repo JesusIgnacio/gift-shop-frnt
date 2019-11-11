@@ -1,5 +1,4 @@
-const GIFT_API_URL = process.env.GIFT_API_URL || 'http://localhost:5000/api/gifts'
-
+const GIFT_API_URL = process.env.API_URL;
 class GiftService{
   
   getGiftDetail = async (id) => {
