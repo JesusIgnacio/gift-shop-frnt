@@ -1,4 +1,4 @@
-const GIFT_API_URL = process.env.API_URL;
+const GIFT_API_URL = 'https://gift-api.herokuapp.com/api/gifts';
 class GiftService{
   
   getGiftDetail = async (id) => {
