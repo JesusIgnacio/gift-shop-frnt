@@ -15,7 +15,7 @@ class GiftDetail extends React.Component{
     this.setState({giftDetail: data.data});
   }
 
-  componentWillMount() {
+  componentDidMount() {
     var params = this.props.match.params;
     this.getGiftDetailData(params.id);
   }

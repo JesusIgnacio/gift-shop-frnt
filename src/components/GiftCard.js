@@ -10,11 +10,7 @@ class GiftCard extends React.Component{
         <div className="card h-100">
           <Link to={"/"+this.props.gift.partNumber}><img className="card-img-top" src={this.props.gift.fullImage} alt=""></img></Link>
           <div className="card-body">
-            {this.props.gift.attributes.map(attr => 
-              { if (attr['name'].toUpperCase()==='Marca'.toUpperCase())
-            { return <h6 key={attr['name']}><b>{attr['value']}</b></h6>}
-              }
-            )}
+            <h6 ><b>{this.props.gift.name.substring(this.props.gift.name.indexOf('|')+1)}</b></h6>
             <br></br>
             <h6 className="card-title">
               <Link to={"/"+this.props.gift.partNumber}>{this.props.gift.name}</Link>
