@@ -6,20 +6,20 @@ import {
 class GiftCard extends React.Component{
   render(){
     return (
-      <div class="col-lg-4 col-md-6 mb-4">
+      <div className="col-lg-4 col-md-6 mb-4">
         <div class="card h-100">
           <Link to={"/"+this.props.gift.partNumber}><img class="card-img-top" src={this.props.gift.fullImage} alt=""></img></Link>
           <div class="card-body">
             {this.props.gift.attributes.map(attr => 
               { if (attr['name'].toUpperCase()==='Marca'.toUpperCase())
-                { return <h8><b>{attr['value']}</b></h8>}
+            { return <h6 key={attr['name']}><b>{attr['value']}</b></h6>}
               }
             )}
             <br></br>
-            <h7 class="card-title">
+            <h6 class="card-title">
               <Link to={"/"+this.props.gift.partNumber}>{this.props.gift.name}</Link>
-            </h7><br></br>
-            <h6>${this.props.gift.prices.listPrice}</h6>
+            </h6><br></br>
+            <h5>${this.props.gift.prices.listPrice}</h5>
           </div>
         </div>
       </div>
