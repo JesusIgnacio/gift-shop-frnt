@@ -23,19 +23,19 @@ class GiftDetail extends React.Component{
 
   render(){
       return (
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-3">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-3">
               </div>
-              <div class="col-lg-9">
-                <div class="card mt-4">
-                  <img class="card-img-top img-fluid" src={this.state.giftDetail.fullImage} alt=""></img>
-                  <div class="card-body">
-                    <h3 class="card-title">{this.state.giftDetail.name}</h3>
+              <div className="col-lg-9">
+                <div className="card mt-4">
+                  <img className="card-img-top img-fluid" src={this.state.giftDetail.fullImage} alt=""></img>
+                  <div className="card-body">
+                    <h3 className="card-title">{this.state.giftDetail.name}</h3>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-3">
+              <div className="col-lg-3">
               </div>
             </div>
           </div>

@@ -4,10 +4,10 @@ import Giftcard from './GiftCard'
 class Catalog extends React.Component{
   render(){
     return (
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="row">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="row">
                 {this.props.gifts.map((gift) => (
                   <Giftcard key={gift.uniqueID} gift={gift}/>
                 ))}              

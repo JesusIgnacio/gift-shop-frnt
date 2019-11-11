@@ -23,7 +23,7 @@ class App extends React.Component{
   render(){
     return (
       <div className="app">
-        <div class="mb-4" >
+        <div className="mb-4" >
         </div>
         <ShopCatalog gifts={this.state.gifts}/>
       </div>
