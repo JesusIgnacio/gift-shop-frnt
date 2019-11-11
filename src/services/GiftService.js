@@ -1,15 +1,15 @@
-const GIFT_API_URL_DEV = 'http://localhost:5000/api/gifts'
+const GIFT_API_URL = process.env.GIFT_API_URL || 'http://localhost:5000/api/gifts'
 
 class GiftService{
   
   getGiftDetail = async (id) => {
-    const response = await fetch(`${GIFT_API_URL_DEV}/${id}`);
+    const response = await fetch(`${GIFT_API_URL}/${id}`);
     const json = await response.json();
     return json;
   }
   
   getGifts = async () => {
-    const response = await fetch(GIFT_API_URL_DEV);
+    const response = await fetch(GIFT_API_URL);
     const json = await response.json();
     return json;
   }
