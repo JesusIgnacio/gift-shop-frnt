@@ -1,17 +1,25 @@
 import React from 'react';
 import ShopCatalog from './components/Catalog'
+import GiftService from './services/GiftService'
 
-const GIFT_API_URL_DEV = 'http://localhost:5000/api/gifts'
 class App extends React.Component{
-  state = {
-    gifts: []
+  constructor(props){
+    super(props);
+    this.state = {
+      gifts: []
+    }
+  }
+  
+  giftService = new GiftService();
+
+  getGiftsData = async (id) => {
+    let data = await this.giftService.getGifts();
+    this.setState({gifts: data.data })
   }
   componentDidMount() {
-    fetch(GIFT_API_URL_DEV)
-    .then(res => res.json())
-    .then((data) => this.setState({gifts: data.data}))
-    .catch(console.log);
+    this.getGiftsData();
   }
+  
   render(){
     return (
       <div className="app">
